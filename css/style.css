@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+body{
+    text-align: center;
+    
+  
+}
+
+
+
+#sfondo{
+    background-image: url(../img/trenitalia-uai-800x342.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50vh;
+    width: 100%;
+    color: white;
+}
+img{
+    width: 400px;
+    height: 150px;
+    object-fit: contain;
+}
+.benvenuto{
+    font-size: 40px;
+    color: #146c67;
+    background-color: white;
+    padding: 0 36px;
+}
+
+span{
+    font-size: 20px;
+}
+
+#costobiglietto{
+    padding: 50px;
+}
