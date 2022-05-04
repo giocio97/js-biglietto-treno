@@ -1,6 +1,6 @@
 // prezzo biglietto
 let prezzoBiglietto = 0.21;
-let prezzoFinale
+let prezzoFinale;
 
 
 //  chiediamo il numero di chilometri che vuole percorrere
@@ -24,16 +24,16 @@ const prezzoOver = prezzoBiglietto * 60 / 100;
 
 
 if  ( eta < 18 ) {
-    let prezzoFinale = chilometri * prezzoMinorenni;
-    prezzoFinale = prezzoFinale.toFixed();
+     prezzoFinale = chilometri * prezzoMinorenni;
+    prezzoFinale = prezzoFinale.toFixed(2);
     console.log(prezzoFinale);
     } else if (eta > 65) {
-        let prezzoFinale = chilometri * prezzoOver;
-        prezzoFinale = prezzoFinale.toFixed();
+         prezzoFinale = chilometri * prezzoOver;
+        prezzoFinale = prezzoFinale.toFixed(2);
         console.log(prezzoFinale);
     } else { 
-        let prezzoFinale= chilometri * prezzoBiglietto;
-        prezzoFinale = prezzoFinale.toFixed();
+         prezzoFinale= chilometri * prezzoBiglietto;
+        prezzoFinale = prezzoFinale.toFixed(2);
         console.log(prezzoFinale);
            
     }
