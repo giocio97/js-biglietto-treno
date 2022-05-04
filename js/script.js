@@ -1,8 +1,10 @@
 // prezzo biglietto
 let prezzoBiglietto = 0.21;
+let prezzoFinale
+
 
 //  chiediamo il numero di chilometri che vuole percorrere
-const chilometri = prompt("Quanti chilometri vuoi percorrere?");
+const chilometri = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
 
 
 console.log(chilometri);
@@ -11,27 +13,30 @@ console.log(chilometri);
 
 const eta = prompt(" Quanti anni hai?");
 
-console.log(eta);
+console.log (eta);
 
-// prezzo finale
-const prezzoFinale = prezzoBiglietto * chilometri; 
-
-        console.log(prezzoFinale);
 
 // prezzo scontato per minorenni
 const prezzoMinorenni = prezzoBiglietto * 80 / 100;
+
 // prezzo scontato per over65
 const prezzoOver = prezzoBiglietto * 60 / 100;
 
 
-
-if ( eta < 18 ) {
-    
-    } 
-     else {const prezzoFinale = prezzoBiglietto * chilometri; 
-
+if  ( eta < 18 ) {
+    let prezzoFinale = chilometri * prezzoMinorenni;
+    prezzoFinale = prezzoFinale.toFixed();
+    console.log(prezzoFinale);
+    } else if (eta > 65) {
+        let prezzoFinale = chilometri * prezzoOver;
+        prezzoFinale = prezzoFinale.toFixed();
         console.log(prezzoFinale);
+    } else { 
+        let prezzoFinale= chilometri * prezzoBiglietto;
+        prezzoFinale = prezzoFinale.toFixed();
+        console.log(prezzoFinale);
+           
     }
 
-
+    document.getElementById("costobiglietto").innerHTML= `il costo del tuo biglietto è: ${prezzoFinale} €`; 
  
